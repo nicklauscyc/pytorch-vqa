@@ -1,16 +1,16 @@
 # paths
-qa_path = 'vqa'  # directory containing the question and annotation jsons
-train_path = 'mscoco/train2014'  # directory of training images
-val_path = 'mscoco/val2014'  # directory of validation images
-test_path = 'mscoco/test2015'  # directory of test images
-preprocessed_path = './resnet-14x14.h5'  # path where preprocessed features are saved to and loaded from
+qa_path = 'annotations'  # directory containing the question and annotation jsons
+train_path = 'viz-wiz-data/processed-train'  # directory of training images
+val_path = 'viz-wiz-data/processed-val'  # directory of validation images
+test_path = 'viz-wiz-data/processed-test'  # directory of test images
+preprocessed_path = '/data/resnet-14x14.h5'  # path where preprocessed features are saved to and loaded from
 vocabulary_path = 'vocab.json'  # path where the used vocabularies for question and answers are saved to
 
 task = 'OpenEnded'
-dataset = 'mscoco'
+dataset = 'viz-wiz-data'
 
 # preprocess config
-preprocess_batch_size = 64
+preprocess_batch_size = 32
 image_size = 448  # scale shorter end of image to this size and centre crop
 output_size = image_size // 32  # size of the feature maps after processing through a network
 output_features = 2048  # number of feature maps thereof
